@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CaseStore - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>CaseStore</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="cart.html">Cart</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>Featured Mobile Cases</h2>
+
+    <div class="product-grid">
+      
+      <!-- Product 1 -->
+      <div class="product-card" id="prod-1">
+        <img src="iphone.jpg" alt="Clear Silicon Case">
+        <h3>Clear Silicon Case</h3>
+        <p class="price">₹499</p>
+
+        <label>Select Color:</label>
+        <div class="color-picker">
+          <div class="color-circle selected" style="background-color: #e0e0e0;" onclick="selectColor('prod-1', '#e0e0e0', this)"></div>
+          <div class="color-circle" style="background-color: #87ceeb;" onclick="selectColor('prod-1', '#87ceeb', this)"></div>
+          <div class="color-circle" style="background-color: #98fb98;" onclick="selectColor('prod-1', '#98fb98', this)"></div>
+        </div>
+
+        <label for="model-1">Phone Model:</label>
+        <select id="model-1">
+          <option>iPhone 15 Pro</option>
+          <option>iPhone 14</option>
+          <option>Samsung Galaxy S24</option>
+          <option>Google Pixel 8</option>
+        </select>
+
+        <div class="btn-group">
+          <a href="product.html?id=1" class="btn btn-secondary">View Details</a>
+          <button class="btn" onclick="addToCart('Clear Silicon Case', 499, 'image1.jpg', 'model-1', 'prod-1')">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card" id="prod-2">
+        <img src="iphone16 pro.jpg" alt="Matte Black Slim Case">
+        <h3>Matte Black Slim Case</h3>
+        <p class="price">₹599</p>
+
+        <label>Select Color:</label>
+        <div class="color-picker">
+          <div class="color-circle selected" style="background-color: #2b2b2b;" onclick="selectColor('prod-2', '#2b2b2b', this)"></div>
+          <div class="color-circle" style="background-color: #708090;" onclick="selectColor('prod-2', '#708090', this)"></div>
+          <div class="color-circle" style="background-color: #191970;" onclick="selectColor('prod-2', '#191970', this)"></div>
+        </div>
+
+        <label for="model-2">Phone Model:</label>
+        <select id="model-2">
+          <option>iPhone 15 Pro</option>
+          <option>iPhone 14</option>
+          <option>Samsung Galaxy S24</option>
+          <option>Google Pixel 8</option>
+        </select>
+
+        <div class="btn-group">
+          <a href="product.html?id=2" class="btn btn-secondary">View Details</a>
+          <button class="btn" onclick="addToCart('Matte Black Slim Case', 599, 'image2.jpg', 'model-2', 'prod-2')">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card" id="prod-3">
+        <img src="iphone 17 pro.jpg" alt="Leather Armor Case">
+        <h3>Leather Armor Case</h3>
+        <p class="price">₹799</p>
+
+        <label>Select Color:</label>
+        <div class="color-picker">
+          <div class="color-circle selected" style="background-color: #8b4513;" onclick="selectColor('prod-3', '#8b4513', this)"></div>
+          <div class="color-circle" style="background-color: #000000;" onclick="selectColor('prod-3', '#000000', this)"></div>
+          <div class="color-circle" style="background-color: #d2b48c;" onclick="selectColor('prod-3', '#d2b48c', this)"></div>
+        </div>
+
+        <label for="model-3">Phone Model:</label>
+        <select id="model-3">
+          <option>iPhone 15 Pro</option>
+          <option>iPhone 14</option>
+          <option>Samsung Galaxy S24</option>
+          <option>Google Pixel 8</option>
+        </select>
+
+        <div class="btn-group">
+          <a href="product.html?id=3" class="btn btn-secondary">View Details</a>
+          <button class="btn" onclick="addToCart('Leather Armor Case', 799, 'image3.jpg', 'model-3', 'prod-3')">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="product-card" id="prod-4">
+        <img src="iphone.jpg" alt="Carbon Fiber Case">
+        <h3>Carbon Fiber Case</h3>
+        <p class="price">₹899</p>
+
+        <label>Select Color:</label>
+        <div class="color-picker">
+          <div class="color-circle selected" style="background-color: #333333;" onclick="selectColor('prod-4', '#333333', this)"></div>
+          <div class="color-circle" style="background-color: #c0c0c0;" onclick="selectColor('prod-4', '#c0c0c0', this)"></div>
+          <div class="color-circle" style="background-color: #ff4500;" onclick="selectColor('prod-4', '#ff4500', this)"></div>
+        </div>
+
+        <label for="model-4">Phone Model:</label>
+        <select id="model-4">
+          <option>iPhone 15 Pro</option>
+          <option>iPhone 14</option>
+          <option>Samsung Galaxy S24</option>
+          <option>Google Pixel 8</option>
+        </select>
+
+        <div class="btn-group">
+          <a href="product.html?id=4" class="btn btn-secondary">View Details</a>
+          <button class="btn" onclick="addToCart('Carbon Fiber Case', 899, 'image1.jpg', 'model-4', 'prod-4')">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="product-card" id="prod-5">
+        <img src="iphone16 pro.jpg" alt="Gradient Glass Case">
+        <h3>Gradient Glass Case</h3>
+        <p class="price">₹699</p>
+
+        <label>Select Color:</label>
+        <div class="color-picker">
+          <div class="color-circle selected" style="background-color: #ff69b4;" onclick="selectColor('prod-5', '#ff69b4', this)"></div>
+          <div class="color-circle" style="background-color: #00ffff;" onclick="selectColor('prod-5', '#00ffff', this)"></div>
+          <div class="color-circle" style="background-color: #dda0dd;" onclick="selectColor('prod-5', '#dda0dd', this)"></div>
+        </div>
+
+        <label for="model-5">Phone Model:</label>
+        <select id="model-5">
+          <option>iPhone 15 Pro</option>
+          <option>iPhone 14</option>
+          <option>Samsung Galaxy S24</option>
+          <option>Google Pixel 8</option>
+        </select>
+
+        <div class="btn-group">
+          <a href="product.html?id=5" class="btn btn-secondary">View Details</a>
+          <button class="btn" onclick="addToCart('Gradient Glass Case', 699, 'image2.jpg', 'model-5', 'prod-5')">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="product-card" id="prod-6">
+        <img src="iphone 17 pro.jpg" alt="Rugged Defender Case">
+        <h3>Rugged Defender Case</h3>
+        <p class="price">₹999</p>
+
+        <label>Select Color:</label>
+        <div class="color-picker">
+          <div class="color-circle selected" style="background-color: #556b2f;" onclick="selectColor('prod-6', '#556b2f', this)"></div>
+          <div class="color-circle" style="background-color: #4682b4;" onclick="selectColor('prod-6', '#4682b4', this)"></div>
+          <div class="color-circle" style="background-color: #b22222;" onclick="selectColor('prod-6', '#b22222', this)"></div>
+        </div>
+
+        <label for="model-6">Phone Model:</label>
+        <select id="model-6">
+          <option>iPhone 15 Pro</option>
+          <option>iPhone 14</option>
+          <option>Samsung Galaxy S24</option>
+          <option>Google Pixel 8</option>
+        </select>
+
+        <div class="btn-group">
+          <a href="product.html?id=6" class="btn btn-secondary">View Details</a>
+          <button class="btn" onclick="addToCart('Rugged Defender Case', 999, 'image3.jpg', 'model-6', 'prod-6')">Add to Cart</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    const selectedCardColors = {
+      'prod-1': '#e0e0e0',
+      'prod-2': '#2b2b2b',
+      'prod-3': '#8b4513',
+      'prod-4': '#333333',
+      'prod-5': '#ff69b4',
+      'prod-6': '#556b2f'
+    };
+
+    function selectColor(prodId, color, element) {
+      selectedCardColors[prodId] = color;
+      const circles = element.parentElement.getElementsByClassName('color-circle');
+      for (let c of circles) {
+        c.classList.remove('selected');
+      }
+      element.classList.add('selected');
+    }
+
+    function addToCart(name, price, image, modelSelectId, prodId) {
+      const model = document.getElementById(modelSelectId).value;
+      const color = selectedCardColors[prodId];
+      const qty = 1;
+
+      const item = { name, price, image, model, color, qty };
+
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart.push(item);
+      localStorage.setItem("cart", JSON.stringify(cart));
+
+      alert(`${name} (${model}) added to cart!`);
+    }
+  </script>
+
+  <footer>
+    <p>&copy; 2026 Mobile Case Store. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
