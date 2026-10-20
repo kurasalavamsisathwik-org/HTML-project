@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Case Details - CaseStore</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>CaseStore</h1>
+    <nav>
+      <a href="index11.html ">Home</a>
+      <a href="cart.html">Cart</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="detail-container" style="display: flex; gap: 40px; background: #fff; padding: 30px; border-radius: 8px; align-items: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+      
+      <!-- Product Image -->
+      <img id="prod-img" src="iphone 17 pro.jpg" alt="Product Image" style="width: 300px; height: 350px; object-fit: contain; background: #f9f9f9; border-radius: 6px;">
+
+      <div style="flex: 1;">
+        <h2 id="prod-name" style="margin-bottom: 10px; text-align: left;">Product Name</h2>
+        <p class="price" id="prod-price" style="font-size: 22px; color: #27ae60; font-weight: bold; margin-bottom: 15px;">₹0</p>
+        <p id="prod-desc" style="margin-bottom: 20px; color: #555; line-height: 1.6;">Product description goes here.</p>
+        
+        <form onsubmit="event.preventDefault(); addDetailedToCart();">
+          
+          <label style="display: block; font-weight: bold; margin-bottom: 5px;">Select Color:</label>
+          <div class="color-picker" id="color-options" style="justify-content: flex-start; margin-bottom: 15px;">
+            <!-- Dynamic Color Swatches -->
+          </div>
+
+          <label for="model" style="display: block; font-weight: bold; margin-bottom: 5px;">Select Phone Model:</label>
+          <select id="model" style="width: 100%; padding: 8px; margin-bottom: 15px; border-radius: 4px; border: 1px solid #ccc;">
+            <option>iPhone 15 Pro</option>
+            <option>iPhone 14</option>
+            <option>Samsung Galaxy S24</option>
+            <option>Google Pixel 8</option>
+          </select>
+
+          <label for="qty" style="display: block; font-weight: bold; margin-bottom: 5px;">Quantity:</label>
+          <input type="number" id="qty" value="1" min="1" style="width: 80px; padding: 6px; margin-bottom: 20px; border-radius: 4px; border: 1px solid #ccc;">
+
+          <br>
+          <button type="submit" class="btn">Add to Cart</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    // Database for all 6 products
+    const productsData = {
+      "1": {
+        name: "Clear Silicon Case",
+        price: 499,
+        image: "iphone.jpg",
+        colors: ["#e0e0e0", "#87ceeb", "#98fb98"],
+        description: "High-quality transparent shockproof silicon case with reinforced corners for maximum drop protection while preserving your phone's original aesthetics."
+      },
+      "2": {
+        name: "Matte Black Slim Case",
+        price: 599,
+        image: "iphone 16 pro.jpg",
+        colors: ["#2b2b2b", "#708090", "#191970"],
+        description: "Ultra-thin, feather-light matte finish cover featuring a smooth anti-fingerprint grip and precise button cutouts for seamless daily usage."
+      },
+      "3": {
+        name: "Leather Armor Case",
+        price: 799,
+        image: "iphone 17 pro.jpg",
+        colors: ["#8b4513", "#000000", "#d2b48c"],
+        description: "Premium handcrafted synthetic leather case offering executive style, comfortable tactile feel, and comprehensive shock absorption."
+      },
+      "4": {
+        name: "Carbon Fiber Case",
+        price: 899,
+        image: "image1.jpg",
+        colors: ["#333333", "#c0c0c0", "#ff4500"],
+        description: "Rugged military-grade carbon fiber textured case built with heat dissipation channels and extreme impact defense for active lifestyle protection."
+      },
+      "5": {
+        name: "Gradient Glass Case",
+        price: 699,
+        image: "image2.jpg",
+        colors: ["#ff69b4", "#00ffff", "#dda0dd"],
+        description: "Stunning 9H tempered glass backboard with vivid color gradient reflections and soft TPU flexible edges for easy installation."
+      },
+      "6": {
+        name: "Rugged Defender Case",
+        price: 999,
+        image: "image3.jpg",
+        colors: ["#556b2f", "#4682b4", "#b22222"],
+        description: "Dual-layer heavy-duty protection with built-in pop-out kickstand, camera lens cover shield, and heavy drop defense."
+      }
+    };
+
+    // Extract product ID from URL query string (e.g. product.html?id=3)
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get("id") || "1";
+
+    // Load active product details
+    const currentProduct = productsData[productId] || productsData["1"];
+    let selectedColor = currentProduct.colors[0];
+
+    document.getElementById("prod-img").src = currentProduct.image;
+    document.getElementById("prod-name").innerText = currentProduct.name;
+    document.getElementById("prod-price").innerText = `₹${currentProduct.price}`;
+    document.getElementById("prod-desc").innerText = currentProduct.description;
+
+    // Build color picker swatches
+    const colorContainer = document.getElementById("color-options");
+    currentProduct.colors.forEach((hexColor, index) => {
+      const circle = document.createElement("div");
+      circle.className = `color-circle ${index === 0 ? 'selected' : ''}`;
+      circle.style.backgroundColor = hexColor;
+      circle.onclick = function() {
+        selectedColor = hexColor;
+        document.querySelectorAll(".color-circle").forEach(c => c.classList.remove("selected"));
+        circle.classList.add("selected");
+      };
+      colorContainer.appendChild(circle);
+    });
+
+    // Save to cart functionality
+    function addDetailedToCart() {
+      const model = document.getElementById("model").value;
+      const qty = parseInt(document.getElementById("qty").value) || 1;
+
+      const item = {
+        name: currentProduct.name,
+        price: currentProduct.price,
+        image: currentProduct.image,
+        model: model,
+        color: selectedColor,
+        qty: qty
+      };
+
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart.push(item);
+      localStorage.setItem("cart", JSON.stringify(cart));
+
+      alert(`${currentProduct.name} (${model}) added to cart!`);
+      window.location.href = "cart.html";
+    }
+  </script>
+
+  <footer>
+    <p>&copy; 2026 Mobile Case Store. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
