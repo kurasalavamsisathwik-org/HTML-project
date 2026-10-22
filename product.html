@@ -10,9 +10,10 @@
   <header>
     <h1>CaseStore</h1>
     <nav>
-      <a href="index11.html ">Home</a>
+      <a href="index.html">Home</a>
       <a href="cart.html">Cart</a>
       <a href="contact.html">Contact</a>
+      <a href="about.html">About us</a>
     </nav>
   </header>
 
@@ -80,21 +81,21 @@
       "4": {
         name: "Carbon Fiber Case",
         price: 899,
-        image: "image1.jpg",
+        image: "iphone.jpg",
         colors: ["#333333", "#c0c0c0", "#ff4500"],
         description: "Rugged military-grade carbon fiber textured case built with heat dissipation channels and extreme impact defense for active lifestyle protection."
       },
       "5": {
         name: "Gradient Glass Case",
         price: 699,
-        image: "image2.jpg",
+        image: "iphone 16 pro.jpg",
         colors: ["#ff69b4", "#00ffff", "#dda0dd"],
         description: "Stunning 9H tempered glass backboard with vivid color gradient reflections and soft TPU flexible edges for easy installation."
       },
       "6": {
         name: "Rugged Defender Case",
         price: 999,
-        image: "image3.jpg",
+        image: "iphone 17 pro.jpg",
         colors: ["#556b2f", "#4682b4", "#b22222"],
         description: "Dual-layer heavy-duty protection with built-in pop-out kickstand, camera lens cover shield, and heavy drop defense."
       }
@@ -110,7 +111,7 @@
 
     document.getElementById("prod-img").src = currentProduct.image;
     document.getElementById("prod-name").innerText = currentProduct.name;
-    document.getElementById("prod-price").innerText = `₹${currentProduct.price}`;
+    document.getElementById("prod-price").innerText = `₹{currentProduct.price}`;
     document.getElementById("prod-desc").innerText = currentProduct.description;
 
     // Build color picker swatches
