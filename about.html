@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Premium Mobile Cases & Covers</title>
+    <style>
+        /* Base Styles */
+        :root {
+            --primary-color: #111111;
+            --accent-color: #0071e3; /* Modern Tech Blue */
+            --bg-light: #f5f5f7;
+            --text-dark: #1d1d1f;
+            --text-muted: #86868b;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: var(--white);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Banner */
+        .hero {
+            background-color: var(--bg-light);
+            text-align: center;
+            padding: 90px 20px 60px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: var(--text-muted);
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        /* Story Section */
+        .story-section {
+            padding: 80px 0;
+        }
+
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .story-text h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .story-text p {
+            color: var(--text-muted);
+            margin-bottom: 18px;
+            font-size: 1.05rem;
+        }
+
+        .story-img img {
+            width: 100%;
+            border-radius: 18px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Features / Why Choose Us */
+        .features-section {
+            background-color: var(--bg-light);
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 50px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 35px 25px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Stats Counter Section */
+        .stats-section {
+            padding: 70px 0;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .stat-item h3 {
+            font-size: 2.8rem;
+            color: var(--accent-color);
+            font-weight: 700;
+        }
+
+        .stat-item p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        /* Call to Action */
+        .cta-section {
+            padding: 90px 20px;
+            text-align: center;
+            background: var(--primary-color);
+            color: var(--white);
+        }
+
+        .cta-section h2 {
+            font-size: 2.4rem;
+            margin-bottom: 15px;
+        }
+
+        .cta-section p {
+            color: #a1a1a6;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+
+        .shop-btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--white);
+            padding: 14px 36px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: opacity 0.3s ease;
+        }
+
+        .shop-btn:hover {
+            opacity: 0.9;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .story-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .story-text h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <h1>Protection Meets Style</h1>
+            <p>We craft premium phone cases designed to safeguard your device without compromising on design.</p>
+        </div>
+    </header>
+
+    <!-- Our Story -->
+    <section class="story-section">
+        <div class="container story-grid">
+            <div class="story-text">
+                <h2>Designed for Everyday Adventures</h2>
+                <p>Founded with a simple mission, we set out to eliminate the trade-off between bulky protective cases and flimsy stylish covers.</p>
+                <p>Every case we make is engineered using precision-cut materials, reinforced corner protection, and high-grip textures. Whether you prefer minimalist clear cases, sleek leather textures, or vibrant custom art, we have you covered.</p>
+            </div>
+            <div class="story-img">
+                <img src="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?auto=format&fit=crop&w=800&q=80" alt="Mobile Cases Showcase">
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats-section">
+        <div class="container stats-grid">
+            <div class="stat-item">
+                <h3>500k+</h3>
+                <p>Cases Sold Worldwide</p>
+            </div>
+            <div class="stat-item">
+                <h3>10ft</h3>
+                <p>Drop Protection</p>
+            </div>
+            <div class="stat-item">
+                <h3>100%</h3>
+                <p>Recyclable Packaging</p>
+            </div>
+            <div class="stat-item">
+                <h3>4.9★</h3>
+                <p>Average Customer Rating</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title">Why Choose Our Cases?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Military-Grade Protection</h3>
+                    <p>Shock-absorbing bumpers and raised camera lips protect your screen and lenses from accidental drops.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✨</div>
+                    <h3>Anti-Yellowing Tech</h3>
+                    <p>Our clear cases are built with specialized UV resistance to stay crystal clear over time.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>MagSafe Compatible</h3>
+                    <p>Built-in strong magnetic rings ensure fast wireless charging and secure accessory attachment.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌱</div>
+                    <h3>Eco-Friendly Materials</h3>
+                    <p>Crafted using sustainable, non-toxic materials and shipped in plastic-free packaging.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Find the Perfect Case for Your Phone</h2>
+            <p>Explore our collection for iPhone, Samsung Galaxy, Google Pixel, and more.</p>
+            <a href="index.html">Explore Collection</a>
+        </div>
+    </section>
+
+</body>
+</html>
