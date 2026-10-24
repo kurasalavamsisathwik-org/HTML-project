@@ -99,6 +99,20 @@
         colors: ["#556b2f", "#4682b4", "#b22222"],
         description: "Dual-layer heavy-duty protection with built-in pop-out kickstand, camera lens cover shield, and heavy drop defense."
       }
+      "7": {
+        name: "Rugged Defender Case",
+        price: 999,
+        image: "iphone 17 pro.jpg",
+        colors: ["#556b2f", "#4682b4", "#b22222"],
+        description: "Dual-layer heavy-duty protection with built-in pop-out kickstand, camera lens cover shield, and heavy drop defense."
+      }
+      "8": {
+        name: "Rugged Defender Case",
+        price: 999,
+        image: "iphone 17 pro.jpg",
+        colors: ["#556b2f", "#4682b4", "#b22222"],
+        description: "Dual-layer heavy-duty protection with built-in pop-out kickstand, camera lens cover shield, and heavy drop defense."
+      }
     };
 
     // Extract product ID from URL query string (e.g. product.html?id=3)
@@ -111,7 +125,7 @@
 
     document.getElementById("prod-img").src = currentProduct.image;
     document.getElementById("prod-name").innerText = currentProduct.name;
-    document.getElementById("prod-price").innerText = `₹{currentProduct.price}`;
+    document.getElementById("prod-price").innerText = `₹` + currentProduct.price;
     document.getElementById("prod-desc").innerText = currentProduct.description;
 
     // Build color picker swatches
