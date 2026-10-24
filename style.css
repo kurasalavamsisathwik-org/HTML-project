@@ -25,6 +25,18 @@ header {
   top: 0;
   z-index: 1000;
 }
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Space between logo image and text */
+}
+
+.logo {
+    height: 40px; /* Adjust this value to make your logo bigger or smaller */
+    width: auto;
+    border-radius: 50%;
+    object-fit: cover;
+}
 
 header h1 {
   font-size: 24px;
@@ -62,8 +74,8 @@ h2 {
 /* Product Grid */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
   margin-top: 20px;
 }
 
@@ -110,11 +122,11 @@ h2 {
 /* Buttons */
 .btn {
   display: inline-block;
-  background-color: #3498db;
+  background-color: #0e1920;
   color: #fff;
-  padding: 12px 20px;
+  padding: 8px 10px;
   border: none;
-  border-radius: 6px;
+  border-radius: 3px;
   text-decoration: none;
   cursor: pointer;
   font-weight: 600;
@@ -201,12 +213,17 @@ form input:focus, form select:focus, form textarea:focus {
 }
 
 /* Footer */
+body {
+    margin: 0;
+    padding: 0;
+}
+
 footer {
-  text-align: center;
-  padding: 25px;
-  margin-top: 60px;
-  background: #1a1a1a;
-  color: #bdc3c7;
-  font-size: 14px;
-  border-top: 1px solid #333;
+    width: 300%;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 10px;
+    box-sizing: border-box;
 }
