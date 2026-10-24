@@ -183,9 +183,58 @@
           <button class="btn" onclick="addToCart('Rugged Defender Case', 999, 'iphone 17 pro.jpg', 'model-6', 'prod-6')">Add to Cart</button>
         </div>
       </div>
+      <!-- Product 7 -->
+      <div class="product-card" id="prod-3">
+        <img src="iphone 17 pro.jpg" alt="Leather Armor Case">
+        <h3>Leather Armor Case</h3>
+        <p class="price">₹799</p>
 
-    </div>
-  </div>
+        <label>Select Color:</label>
+        <div class="color-picker">
+          <div class="color-circle selected" style="background-color: #8b4513;" onclick="selectColor('prod-7', '#8b4513', this)"></div>
+          <div class="color-circle" style="background-color: #000000;" onclick="selectColor('prod-7', '#000000', this)"></div>
+          <div class="color-circle" style="background-color: #d2b48c;" onclick="selectColor('prod-7', '#d2b48c', this)"></div>
+        </div>
+
+        <label for="model-7">Phone Model:</label>
+        <select id="model-7">
+          <option>iPhone 15 Pro</option>
+          <option>iPhone 14</option>
+          <option>Samsung Galaxy S24</option>
+          <option>Google Pixel 8</option>
+        </select>
+
+        <div class="btn-group">
+          <a href="product.html?id=7" class="btn btn-secondary">View Details</a>
+          <button class="btn" onclick="addToCart('Leather Armor Case', 799, 'iphone 17 pro.jpg', 'model-7', 'prod-7')">Add to Cart</button>
+        </div>
+      </div>
+       <!-- Product 8 -->
+      <div class="product-card" id="prod-8">
+        <img src="iphone 17 pro.jpg" alt="Leather Armor Case">
+        <h3>Leather Armor Case</h3>
+        <p class="price">₹799</p>
+
+        <label>Select Color:</label>
+        <div class="color-picker">
+          <div class="color-circle selected" style="background-color: #8b4513;" onclick="selectColor('prod-7', '#8b4513', this)"></div>
+          <div class="color-circle" style="background-color: #000000;" onclick="selectColor('prod-7', '#000000', this)"></div>
+          <div class="color-circle" style="background-color: #d2b48c;" onclick="selectColor('prod-7', '#d2b48c', this)"></div>
+        </div>
+
+        <label for="model-8">Phone Model:</label>
+        <select id="model-8">
+          <option>iPhone 15 Pro</option>
+          <option>iPhone 14</option>
+          <option>Samsung Galaxy S24</option>
+          <option>Google Pixel 8</option>
+        </select>
+
+        <div class="btn-group">
+          <a href="product.html?id=8" class="btn btn-secondary">View Details</a>
+          <button class="btn" onclick="addToCart('Leather Armor Case', 799, 'iphone 17 pro.jpg', 'model-8', 'prod-8')">Add to Cart</button>
+        </div>
+      </div>
 
   <script>
     const selectedCardColors = {
@@ -194,7 +243,9 @@
       'prod-3': '#8b4513',
       'prod-4': '#333333',
       'prod-5': '#ff69b4',
-      'prod-6': '#556b2f'
+      'prod-6': '#556b2f',
+      'prod-7': '#556b2f',
+      'prod-8': '#556b2f'
     };
 
     function selectColor(prodId, color, element) {
@@ -220,10 +271,10 @@
       alert(`${name} (${model}) added to cart!`);
     }
   </script>
-
+<div></div>
   <footer>
     <p>&copy; 2026 Mobile Case Store. All rights reserved.</p>
   </footer>
-
+</div>
 </body>
 </html>
