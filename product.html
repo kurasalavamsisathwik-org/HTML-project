@@ -14,6 +14,7 @@
       <a href="cart.html">Cart</a>
       <a href="contact.html">Contact</a>
       <a href="about.html">About us</a>
+       <a href="login.html">login</a>
     </nav>
   </header>
 
@@ -27,7 +28,7 @@
       
       <div style="flex: 1;">
         <h2 id="prod-name" style="margin-bottom: 10px; text-align: left;">Product Name</h2>
-        <p class="price" id="prod-price" style="font-size: 22px; color: #27ae60; font-weight: bold; margin-bottom: 15px;">₹0</p>
+        <p class="price" id="prod-price" style="font-size: 22px; color: #000000; font-weight: bold; margin-bottom: 15px;">₹0</p>
         <p id="prod-desc" style="margin-bottom: 20px; color: #555; line-height: 1.6;">Product description goes here.</p>
         
         <form onsubmit="event.preventDefault(); addDetailedToCart();">
@@ -60,54 +61,61 @@
     const productsData = {
       "1": {
         name: "Clear Silicon Case",
-        price: 499,
-        image: "iphone.jpg",
+        price: 299 ,
+        image: "911.jpg",
         colors: ["#e0e0e0", "#87ceeb", "#98fb98"],
         description: "High-quality transparent shockproof silicon case with reinforced corners for maximum drop protection."
       },
       "2": {
         name: "Matte Black Slim Case",
-        price: 599,
+        price: 399,
         image: "iphone 16 pro.jpg",
         colors: ["#2b2b2b", "#708090", "#191970"],
         description: "Ultra-thin, feather-light matte finish cover featuring a smooth anti-fingerprint grip."
       },
       "3": {
         name: "Leather Armor Case",
-        price: 799,
+        price: 399,
         image: "iphone 17 pro.jpg",
         colors: ["#8b4513", "#000000", "#d2b48c"],
         description: "Premium handcrafted synthetic leather case offering executive style and shock absorption."
       },
       "4": {
         name: "Carbon Fiber Case",
-        price: 899,
+        price: 499,
         image: "iphone.jpg",
         colors: ["#333333", "#c0c0c0", "#ff4500"],
         description: "Rugged military-grade carbon fiber textured case built with extreme impact defense."
       },
       "5": {
         name: "Gradient Glass Case",
-        price: 699,
+        price: 499,
         image: "iphone 16 pro.jpg",
         colors: ["#ff69b4", "#00ffff", "#dda0dd"],
         description: "Stunning 9H tempered glass backboard with vivid color gradient reflections."
       },
       "6": {
         name: "Rugged Defender Case",
-        price: 999,
+        price: 599,
         image: "iphone 17 pro.jpg",
         colors: ["#556b2f", "#4682b4", "#b22222"],
         description: "Dual-layer heavy-duty protection with built-in pop-out kickstand and lens cover."
       },
       "7": {
         name: "Ultra Armor Case",
-        price: 599,
+        price: 299,
+        image: "samsungs25ultra.jpg",
+        colors: ["#556b2f", "#4682b4", "#b22222"],
+        description: "Dual-layer heavy-duty protection with built-in pop-out kickstand and lens cover."
+      },
+      "8": {
+        name: "Ultra Armor Case",
+        price: 299,
         image: "samsungs25ultra.jpg",
         colors: ["#556b2f", "#4682b4", "#b22222"],
         description: "Dual-layer heavy-duty protection with built-in pop-out kickstand and lens cover."
       }
-    };
+    }
 
     const urlParams = new URLSearchParams(window.location.search);
     const productId = urlParams.get("id") || "1";
